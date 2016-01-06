@@ -4,7 +4,7 @@
 
 An Android Project with more than one module，the app module(some api developed by jni) depend on an Android Library which has native so.
 
-改项目是一个使用Android Studio创建的，通过gradle编译的，存在多个模块的工程的gradle构建的事例。其中存在多个模块的工程中包含:
+该项目是一个使用Android Studio创建的，通过gradle编译的，存在多个模块的工程的gradle构建的事例。其中存在多个模块的工程中包含:
 
 - 一个Android Library的模块，该模块使用了第三方的jar和so
 - 一个Android Application模块，该模块引用上面的Android Library，自身包含jni的接口调用。
