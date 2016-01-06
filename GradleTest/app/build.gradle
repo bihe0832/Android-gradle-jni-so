@@ -1,0 +1,48 @@
+apply plugin: 'com.android.model.application'
+model {
+    android {
+        compileSdkVersion = 22
+        buildToolsVersion = "22.0.1"
+
+        defaultConfig.with {
+            applicationId = "com.bihe0832.gradletest"
+            minSdkVersion.apiLevel = 8
+            targetSdkVersion.apiLevel = 22
+            versionCode = 1
+            versionName = "1.0.0"
+        }
+    }
+
+    android.lintOptions {
+        abortOnError false
+    }
+
+    android.buildTypes {
+        release {
+            minifyEnabled = true
+            proguardFiles += file( './../proguard-rules.pro')
+        }
+    }
+
+    android.ndk {
+        moduleName = "GradleTest"
+        cppFlags.add("-Werror")
+        ldLibs.addAll(["log", "GLESv2"])
+        stl = "stlport_static"
+    }
+
+    android.productFlavors {
+        create("all")
+    }
+
+}
+
+dependencies {
+    compile project(':gradletestlibrary')
+    compile 'com.android.support:support-v4:18.0.+'
+}
+repositories{
+    flatDir{
+        dirs 'libs'
+    }
+}

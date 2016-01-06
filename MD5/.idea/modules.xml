@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$USER_HOME$/Documents/github/Android-gradle-jni-so/MD5/MD5.iml" filepath="$USER_HOME$/Documents/github/Android-gradle-jni-so/MD5/MD5.iml" />
+      <module fileurl="file://$USER_HOME$/Documents/github/Android-gradle-jni-so/MD5/app/app.iml" filepath="$USER_HOME$/Documents/github/Android-gradle-jni-so/MD5/app/app.iml" />
+    </modules>
+  </component>
+</project>

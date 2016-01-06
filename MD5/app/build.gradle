@@ -1,0 +1,38 @@
+apply plugin: 'com.android.model.library'
+
+model {
+    android {
+
+        compileSdkVersion = 22
+        buildToolsVersion = "22.0.1"
+
+        defaultConfig.with {
+            minSdkVersion.apiLevel = 8
+            targetSdkVersion.apiLevel = 22
+            versionCode = 1
+            versionName = "1.0.0"
+
+        }
+    }
+    android.lintOptions {
+        abortOnError false
+    }
+
+    android.buildTypes {
+        release {
+            minifyEnabled = true
+            proguardFiles += file( './../proguard-rules.pro')
+        }
+    }
+
+    android.ndk {
+        moduleName = "bihe0832MD5"
+        cppFlags.add("-Werror")
+        ldLibs.addAll(["log", "GLESv2"])
+        stl = "stlport_static"
+    }
+
+    android.productFlavors {
+        create("all")
+    }
+}
