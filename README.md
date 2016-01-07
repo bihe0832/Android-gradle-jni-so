@@ -23,9 +23,9 @@ An Android Project with more than one module，the app module(some api developed
 - 准备工作
 
 	下面的两种方式都可以运行，不过运行之前要先根据自己的网络环境修改下面几个文件。
-		
-	- 修改GradleTest下gradle/wrapper/gradle-wrapper.properties 关于使用的gradle-2.5-all.zip的地址的修改
+	- 修改GradleTest下local.properies中的ndk.dir和sdk.dir的环境配置	- 修改GradleTest下gradle/wrapper/gradle-wrapper.properties 关于使用的gradle-2.5-all.zip的地址的修改
 	- 修改GradleTest下build.gradle中对于使用的maven库的声明
+	- 修改MD5下local.properies中的ndk.dir和sdk.dir的环境配置
 	- 修改MD5下gradle/wrapper/gradle-wrapper.properties 关于使用的gradle-2.5-all.zip的地址的修改
 	- 修改MD5下build.gradle中对于使用的maven库的声明
 
