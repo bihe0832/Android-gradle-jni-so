@@ -2,7 +2,7 @@
 
 buildscript {
     repositories {
-        maven { url "http://localhost:8081/nexus/content/repositories/android"}
+        maven { url "http://maven.bihe0832.com:8081/nexus/content/repositories/android"}
     }
     dependencies {
         classpath "com.android.tools.build:gradle-experimental:0.2.+"
@@ -11,7 +11,7 @@ buildscript {
 
 allprojects {
     repositories {
-        maven { url "http://localhost:8081/nexus/content/repositories/android"}
+        maven { url "http://maven.bihe0832.com:8081/nexus/content/repositories/android"}
     }
 }
 
