@@ -10,12 +10,26 @@ An Android Project with more than one module，the app module(some api developed
 - 一个Android Application模块，该模块引用上面的Android Library，自身包含jni的接口调用。
 ## 体验方式
 
-- Demo 下载：
-	- [点击下载](http://blog.bihe0832.com/public/resource/GradleTest-debug.apk)
-	- 扫码下载APK：
+#### Demo 下载：
 	
-		![获取大写md5值的函数调用流程](http://blog.bihe0832.com/public/images/gradle-test-apk-download.png)
-- 运行工程：
+- [点击下载](http://blog.bihe0832.com/public/resource/GradleTest-debug.apk)
+	
+- 扫码下载APK：
+	
+![获取大写md5值的函数调用流程](http://blog.bihe0832.com/public/images/gradle-test-apk-download.png)
+
+#### 运行工程：
+
+- 准备工作
+
+	下面的两种方式都可以运行，不过运行之前要先根据自己的网络环境修改下面几个文件。
+		
+	- 修改GradleTest下gradle/wrapper/gradle-wrapper.properties 关于使用的gradle-2.5-all.zip的地址的修改
+	- 修改GradleTest下build.gradle中对于使用的maven库的声明
+	- 修改MD5下gradle/wrapper/gradle-wrapper.properties 关于使用的gradle-2.5-all.zip的地址的修改
+	- 修改MD5下build.gradle中对于使用的maven库的声明
+
+- 运行方式	
 	
 	- 使用Android Studio 逐个导入
 	- 直接在根目录运行build.sh
@@ -85,10 +99,9 @@ GradleTest是核心工程，它里面包含了一个Android Library的模块grad
 	- build.gradle 代码如下：
 		
 			buildscript {
-				repositories {
-					maven { url 'http://maven.oschina.net/content/groups/public/' }
-        			jcenter()
-			    }
+				
+				……
+				
 			    dependencies {
 			        classpath "com.android.tools.build:gradle-experimental:0.2.+"
 			    }
