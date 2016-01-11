@@ -11,7 +11,13 @@ model {
             targetSdkVersion.apiLevel = 22
             versionCode = 1
             versionName = "1.0.0"
-
+            buildConfigFields.with {
+                create() {
+                    type = "boolean"
+                    name = "ENABLE_DEBUG"
+                    value = "false"
+                }
+            }
         }
     }
     android.lintOptions {
