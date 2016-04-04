@@ -114,3 +114,9 @@ GradleTest是核心工程，它里面包含了一个Android Library的模块grad
 			zipStoreBase=GRADLE_USER_HOME
 			zipStorePath=wrapper/dists
 			distributionUrl=http\://services.gradle.org/distributions/gradle-2.5-all.zip
+			
+## 再次补充
+
+当时写这个事例的时候gradle-experimental插件的0.2版本刚出，发现他对一些语法规则做了调整，不兼容Android gradle插件标准版的语法。也是因为这个原因当时写了对应的文档和事例。
+
+前段时间再去看官方关于gradle experimental的介绍的时候惊诧的发现，最新版本的gradle-experimental插件的语法又改回了主流版本的语法规则，就悲催的发现这篇文章仅供参考了，后续我会再更新个支持主流语法的版本出来。
