@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$USER_HOME$/Documents/github/Android-gradle-jni-so/GradleTest/GradleTest.iml" filepath="$USER_HOME$/Documents/github/Android-gradle-jni-so/GradleTest/GradleTest.iml" />
-      <module fileurl="file://$USER_HOME$/Documents/github/Android-gradle-jni-so/GradleTest/app/app.iml" filepath="$USER_HOME$/Documents/github/Android-gradle-jni-so/GradleTest/app/app.iml" />
-      <module fileurl="file://$USER_HOME$/Documents/github/Android-gradle-jni-so/GradleTest/gradletestlibrary/gradletestlibrary.iml" filepath="$USER_HOME$/Documents/github/Android-gradle-jni-so/GradleTest/gradletestlibrary/gradletestlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GradleTest.iml" filepath="$PROJECT_DIR$/GradleTest.iml" />
     </modules>
   </component>
 </project>

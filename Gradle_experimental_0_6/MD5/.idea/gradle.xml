@@ -7,14 +7,14 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
-            <option value="$USER_HOME$/Documents/github/Android-gradle-jni-so/New/MD5" />
-            <option value="$USER_HOME$/Documents/github/Android-gradle-jni-so/New/MD5/app" />
+            <option value="$USER_HOME$/Documents/github/Android-gradle-jni-so/Gradle_experimental_0_6/MD5" />
+            <option value="$USER_HOME$/Documents/github/Android-gradle-jni-so/Gradle_experimental_0_6/MD5/app" />
           </set>
         </option>
         <option name="myModules">
           <set>
-            <option value="$USER_HOME$/Documents/github/Android-gradle-jni-so/New/MD5" />
-            <option value="$USER_HOME$/Documents/github/Android-gradle-jni-so/New/MD5/app" />
+            <option value="$USER_HOME$/Documents/github/Android-gradle-jni-so/Gradle_experimental_0_6/MD5" />
+            <option value="$USER_HOME$/Documents/github/Android-gradle-jni-so/Gradle_experimental_0_6/MD5/app" />
           </set>
         </option>
       </GradleProjectSettings>

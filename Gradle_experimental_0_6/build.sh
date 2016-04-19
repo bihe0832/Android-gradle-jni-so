@@ -14,7 +14,7 @@ function checkResult() {
 export ANDROID_HOME=$ANDROID_SDK
 export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
 export ANDROID_NDK_HOME=$ANDROIDNDK_LINUX_R10C
-export PATH=$JDK7/bin:$GRADLE_HOME/bin:$PATH
+export PATH=$JAVA_HOME/bin:$GRADLE_HOME/bin:$PATH
 echo $ANDROID_HOME
 echo $JAVA_HOME
 echo $ANDROID_NDK_HOME

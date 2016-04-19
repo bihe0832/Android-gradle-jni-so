@@ -50,7 +50,7 @@ An Android Project with more than one module，the app module(some api developed
 
 在项目中存在两个Android Studio的工程
 
-### GradleTest
+#### GradleTest
 
 GradleTest是核心工程，它里面包含了一个Android Library的模块gradletestlibrary和一个Android Application的模块app。
 
@@ -62,7 +62,7 @@ GradleTest是核心工程，它里面包含了一个Android Library的模块grad
 
 	一个Android Application的模块，他引用gradletestlibrary，同时里面包含jni的代码，通过native的方式调用gradletestlibrary提供的方法。
 
-### MD5
+#### MD5
 
 一个普通的Android 工程，他包含java和jni代码，最终打包后对外提供jar包和so。模拟第三方的jar和so提供给GradleTest使用。
 
@@ -92,11 +92,11 @@ GradleTest是核心工程，它里面包含了一个Android Library的模块grad
 
 说实话，这么设计一个工程是有点复杂，但是却存在实实际际的使用场景。上面的工程是自己根据一直以来SDK开发时实际经验总结，下面对该事例中的两个工程以及对应模块做个现实中的身份映射。
 
-### 一点说明
+#### 一点说明
 
 首先、这个完整的架构是主要是提供给SDK的开发者或者大型项目存在公共代码库的情况下使用的。如果项目代码很少，确实不用搭建如此复杂的框架。
 
-### 具体身份映射
+#### 具体身份映射
 
 - MD5  ————  映射SDK开发者或者项目公共库依赖的第三方库，例如SDK的开发者会用到一些第三方的数据统计、账号登陆SDK等
 - GradleTest ————  SDK开发者或者项目的工程
