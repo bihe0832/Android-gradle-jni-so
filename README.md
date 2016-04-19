@@ -37,6 +37,15 @@ An Android Project with more than one module，the app module(some api developed
 	- 使用Android Studio 逐个导入
 	- 直接在根目录运行build.sh
 	 
+## 目录介绍
+
+由于Google最新的gradle-experimental插件对部分语法有调整，因此最近对项目内容作了一次调整。具体如下：
+
+- Gradle_experimental_0_2：基于Gradle-experimental的0.2版本实现
+- Gradle_experimental_0_6：基于Gradle-experimental的0.6版本实现
+
+两个版本的代码内容完全一致，唯一区别就是build.gradle里面的实现。
+
 ## 工程介绍
 
 在项目中存在两个Android Studio的工程
@@ -97,8 +106,10 @@ GradleTest是核心工程，它里面包含了一个Android Library的模块grad
 ## 特别说明
 
 1. 本文档只是重点介绍整个项目的工程架构，对于具体的语法没有做说明，后续会逐步整理增加到博客。
-- 目前gradle支持native构建需要使用特定的gradle版本和gradle tools版本以及NDK版本。具体相关说明可以参照[Experimental Plugin User Guide](http://blog.bihe0832.com/Experimental_Plugin_User_Guide.html)中的说明。对于该项目来说，不要修改项目build.gradle中buildscript内对于gradle tools的版本的声明以及根目录gradle下gradle-wrapper.properties中对于gradle版本的说明。也就是说：
-	- 必须使用gradle-2.5-all 和 com.android.tools.build:gradle-experimental:0.2.+
+- 目前gradle支持native构建需要使用特定的gradle版本和gradle tools版本以及NDK版本。具体相关说明可以参照[Experimental Plugin User Guide](http://blog.bihe0832.com/Experimental_Plugin_User_Guide.html)中的说明。对于该项目来说，对于每个目录下的完整工程**不要修改项目build.gradle中buildscript内对于gradle tools的版本的声明以及根目录gradle下gradle-wrapper.properties中对于gradle版本的说明**。也就是说：
+
+	- 使用 com.android.tools.build:gradle-experimental:0.2.+ 必须对应 gradle-2.5-all 。使用 com.android.tools.build:gradle-experimental:0.6.+ 必须对应 gradle-2.10-all 。具体以gradle-experimental:0.2和gradle-2.5-all举例如下：
+
 	- build.gradle 代码如下：
 		
 			buildscript {
@@ -111,7 +122,7 @@ GradleTest是核心工程，它里面包含了一个Android Library的模块grad
 			}
 	- gradle-wrapper.properties 内容如下：
 
-			#Tue Dec 15 16:08:58 CST 2015
+			# Tue Dec 15 16:08:58 CST 2015
 			distributionBase=GRADLE_USER_HOME
 			distributionPath=wrapper/dists
 			zipStoreBase=GRADLE_USER_HOME
@@ -122,4 +133,4 @@ GradleTest是核心工程，它里面包含了一个Android Library的模块grad
 
 当时写这个事例的时候gradle-experimental插件的0.2版本刚出，发现他对一些语法规则做了调整，不兼容Android gradle插件标准版的语法。也是因为这个原因当时写了对应的文档和事例。
 
-前段时间再去看官方关于gradle experimental的介绍的时候惊诧的发现，最新版本的gradle-experimental插件的语法又改回了主流版本的语法规则，就悲催的发现这篇文章仅供参考了，后续我会再更新个支持主流语法的版本出来。
+前段时间再去看官方关于gradle experimental的介绍的时候惊诧的发现，最新版本的gradle-experimental插件的语法又部分改回了主流版本的语法规则，就悲催的发现这篇文章仅供参考了。因此这几天彻底重新调整了目录，方便后续编译。

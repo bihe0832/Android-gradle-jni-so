@@ -1,0 +1,56 @@
+apply plugin: 'com.android.model.application'
+model {
+    android {
+
+        compileSdkVersion rootProject.ext.compileSdkVersion
+        buildToolsVersion rootProject.ext.buildToolsVersion
+
+        defaultConfig.with {
+            applicationId = "com.bihe0832.gradletest"
+            minSdkVersion.apiLevel rootProject.ext.minSdkVersionApiLevel
+            targetSdkVersion.apiLevel rootProject.ext.targetSdkVersionApiLevel
+            versionCode rootProject.ext.versionCode
+            versionName rootProject.ext.versionName
+            buildConfigFields.with {
+                create() {
+                    type = "boolean"
+                    name = "ENABLE_DEBUG"
+                    value = "false"
+                }
+            }
+        }
+    }
+
+    android.lintOptions {
+        abortOnError false
+    }
+
+    android.buildTypes {
+        release {
+            minifyEnabled = true
+            proguardFiles.add(file( './../proguard-rules.pro'))
+        }
+    }
+
+    android.ndk {
+        moduleName = "GradleTest"
+        cppFlags.add("-Werror")
+        ldLibs.addAll(["log", "GLESv2"])
+        stl = "stlport_static"
+    }
+
+    android.productFlavors {
+        create("all")
+    }
+
+}
+
+dependencies {
+    compile project(':gradletestlibrary')
+    compile 'com.android.support:support-v4:18.0.+'
+}
+repositories{
+    flatDir{
+        dirs 'libs'
+    }
+}

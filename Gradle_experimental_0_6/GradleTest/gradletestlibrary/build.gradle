@@ -1,0 +1,32 @@
+apply plugin: 'com.android.model.library'
+
+model {
+    android {
+
+        compileSdkVersion rootProject.ext.compileSdkVersion
+        buildToolsVersion rootProject.ext.buildToolsVersion
+
+        defaultConfig.with {
+            minSdkVersion.apiLevel rootProject.ext.minSdkVersionApiLevel
+            targetSdkVersion.apiLevel rootProject.ext.targetSdkVersionApiLevel
+            versionCode rootProject.ext.versionCode
+            versionName rootProject.ext.versionName
+            buildConfigFields.with {
+                create() {
+                    type = "boolean"
+                    name = "ENABLE_DEBUG"
+                    value = "false"
+                }
+            }
+        }
+    }
+    android.lintOptions {
+        abortOnError false
+    }
+}
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(dir: 'jniLibs', include: ['*.so'])
+}

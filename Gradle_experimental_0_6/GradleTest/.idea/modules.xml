@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/GradleTest.iml" filepath="$PROJECT_DIR$/GradleTest.iml" />
+      <module fileurl="file://$USER_HOME$/Documents/github/Android-gradle-jni-so/New/GradleTest/app/app.iml" filepath="$USER_HOME$/Documents/github/Android-gradle-jni-so/New/GradleTest/app/app.iml" />
+      <module fileurl="file://$USER_HOME$/Documents/github/Android-gradle-jni-so/New/GradleTest/gradletestlibrary/gradletestlibrary.iml" filepath="$USER_HOME$/Documents/github/Android-gradle-jni-so/New/GradleTest/gradletestlibrary/gradletestlibrary.iml" />
+    </modules>
+  </component>
+</project>
