@@ -25,4 +25,7 @@ ext {
 
     versionCode = 2
     versionName = "1.1.0"
+
+    EVN_JAVA_1_7 = JavaVersion.VERSION_1_7
+    EVN_JAVA_1_8 = JavaVersion.VERSION_1_8
 }

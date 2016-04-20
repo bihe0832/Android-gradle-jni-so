@@ -19,7 +19,6 @@ echo $ANDROID_HOME
 echo $JAVA_HOME
 echo $ANDROID_NDK_HOME
 
-
 echo "********build mkdir bin *******"
 
 localPath=`pwd`
