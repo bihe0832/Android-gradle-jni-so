@@ -34,7 +34,7 @@ An Android Project with more than one module，the app module(some api developed
 	- 修改GradleTest下build.gradle中对于使用的maven库的声明
 	- 标准版本需要修改GradleTest下gradle.properties文件，添加参数：android.useDeprecatedNdk=true
 	- 修改MD5下local.properies中的ndk.dir和sdk.dir的环境配置
-	- 修改MD5下gradle/wrapper/gradle-wrapper.properties 关于使用的gradle-2.5-all.zip的地址的修改
+	- 修改MD5下gradle/wrapper/gradle-wrapper.properties 关于使用的gradle版本的地址的修改
 	- 修改MD5下build.gradle中对于使用的maven库的声明
 	- 标准版本需要修改MD5下gradle.properties文件，添加参数：android.useDeprecatedNdk=true
 
