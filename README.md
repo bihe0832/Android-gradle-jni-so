@@ -4,10 +4,9 @@
 
 An Android Project with more than one module，the app module(some api developed by jni) depend on an Android Library which has native so.
 
-该项目是一个使用Android Studio创建的，通过gradle编译的，存在多个模块的工程的gradle构建的事例。其中存在多个模块的工程中包含:
+该项目是一个使用Android Studio创建的，通过gradle编译的，存在多个模块的工程的gradle构建的事例。完整的模拟了第三方SDK，自己SDK以及Demo之前的调用关系以及相关的gradle编译脚本。
 
-- 一个Android Library的模块，该模块使用了第三方的jar和so
-- 一个Android Application模块，该模块引用上面的Android Library，自身包含jni的接口调用。
+**该项目重点介绍不同gradle插件版本下的项目的编译脚本怎么编写。提供的多个版本的项目源码完全一致，仅build.gradle有区别。**
 
 ## 体验方式
 
@@ -39,16 +38,21 @@ An Android Project with more than one module，the app module(some api developed
 	 
 ## 目录介绍
 
-由于Google最新的gradle-experimental插件对部分语法有调整，因此最近对项目内容作了一次调整。具体如下：
+由于Google最新的gradle-experimental插件对部分语法有调整，加上最近咨询用标准版怎么搞得人比较多，因此最近对项目内容作了一次调整。具体如下：
 
-- Gradle_experimental_0_2：基于Gradle-experimental的0.2版本实现
-- Gradle_experimental_0_6：基于Gradle-experimental的0.6版本实现
+- `Gradle_1_+`：基于Gradle的1.0以上版本实现
+- `Gradle_experimental_0_2`：基于Gradle-experimental的0.2版本实现
+- `Gradle_experimental_0_6`：基于Gradle-experimental的0.6版本实现
 
-两个版本的代码内容完全一致，唯一区别就是build.gradle里面的实现。
+三个个版本的代码内容完全一致，唯一区别就是build.gradle里面的实现。
 
 ## 工程介绍
 
 在项目中存在两个Android Studio的工程
+
+#### MD5
+
+一个普通的Android 工程，他包含java和jni代码，最终打包后对外提供jar包和so。模拟第三方的jar和so提供给GradleTest使用。
 
 #### GradleTest
 
@@ -62,9 +66,6 @@ GradleTest是核心工程，它里面包含了一个Android Library的模块grad
 
 	一个Android Application的模块，他引用gradletestlibrary，同时里面包含jni的代码，通过native的方式调用gradletestlibrary提供的方法。
 
-#### MD5
-
-一个普通的Android 工程，他包含java和jni代码，最终打包后对外提供jar包和so。模拟第三方的jar和so提供给GradleTest使用。
 
 ## 关键代码结构
 
