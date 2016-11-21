@@ -25,6 +25,11 @@ model {
         abortOnError false
     }
 
+    android.compileOptions {
+        sourceCompatibility = rootProject.ext.EVN_JAVA_1_7
+        targetCompatibility = rootProject.ext.EVN_JAVA_1_7
+    }
+
     android.buildTypes {
         release {
             minifyEnabled = true

@@ -3,14 +3,14 @@ apply plugin: 'com.android.model.library'
 model {
     android {
 
-        compileSdkVersion = rootProject.ext.compileSdkVersion
-        buildToolsVersion = rootProject.ext.buildToolsVersion
+        compileSdkVersion = 22
+        buildToolsVersion = "22.0.1"
 
         defaultConfig.with {
-            minSdkVersion.apiLevel = rootProject.ext.minSdkVersionApiLevel
-            targetSdkVersion.apiLevel = rootProject.ext.targetSdkVersionApiLevel
-            versionCode = rootProject.ext.versionCode
-            versionName = rootProject.ext.versionName
+            minSdkVersion.apiLevel = 8
+            targetSdkVersion.apiLevel = 22
+            versionCode = 1
+            versionName = "1.0.0"
             buildConfigFields.with {
                 create() {
                     type = "boolean"
@@ -25,8 +25,8 @@ model {
     }
 
     android.compileOptions {
-        sourceCompatibility = rootProject.ext.EVN_JAVA_1_7
-        targetCompatibility = rootProject.ext.EVN_JAVA_1_7
+        sourceCompatibility = JavaVersion.VERSION_1_7
+        targetCompatibility = JavaVersion.VERSION_1_7
     }
     
     android.buildTypes {
