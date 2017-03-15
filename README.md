@@ -20,25 +20,9 @@ An Android Project with more than one module，the app module(some api developed
 
 #### 运行工程：
 
-- 运行方式	
-	
-	- 使用Android Studio 逐个导入
-	- 直接在根目录运行build.sh
-	
-- 准备工作
+如何修改配置及运行工程，请参考本人博客：[终端基于gradle的开源项目运行环境配置指引](
+http://blog.bihe0832.com/android-as-gradle-config.html)
 
-	上面的两种方式都可以运行，不过运行之前要先根据自己的网络环境以及对应的gradle插件版本修改下面几个文件。
-	
-	- 修改GradleTest下local.properies中的ndk.dir和sdk.dir的环境配置
-	- 修改GradleTest下gradle/wrapper/gradle-wrapper.properties 关于使用的gradle版本的地址的修改
-	- 修改GradleTest下build.gradle中对于使用的maven库的声明
-	- 标准版本需要修改GradleTest下gradle.properties文件，添加参数：android.useDeprecatedNdk=true
-	- 修改MD5下local.properies中的ndk.dir和sdk.dir的环境配置
-	- 修改MD5下gradle/wrapper/gradle-wrapper.properties 关于使用的gradle版本的地址的修改
-	- 修改MD5下build.gradle中对于使用的maven库的声明
-	- 标准版本需要修改MD5下gradle.properties文件，添加参数：android.useDeprecatedNdk=true
-
-	 
 ## 目录介绍
 
 由于Google最新的gradle-experimental插件对部分语法有调整，加上最近咨询用标准版怎么搞得人比较多，因此最近对项目内容作了一次调整。具体如下：
