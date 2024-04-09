@@ -1,7 +1,7 @@
 package com.bihe0832.gradletest;
 
 /**
- * Created by hardyshi on 16/1/6.
+ * Created by zixie on 16/1/6.
  */
 public class GradleTestDemoNative {
 
